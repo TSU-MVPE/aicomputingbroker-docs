@@ -1,0 +1,74 @@
+/* ==== Global Styles (Light & Dark Mode) ==== */
+
+/* Top nav bar styling — consistent brand color */
+.md-header {
+  background-color: #2400A8  !important; 
+  color: white !important;
+  box-shadow: none;
+}
+
+/* Logo size adjustments */
+.md-header__button.md-logo {
+  padding: 0.25rem;
+}
+.md-header__button.md-logo img {
+  height: 36px;
+}
+
+/* Smooth fonts for main content */
+.md-typeset {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==== Code Block Styling ==== */
+pre code {
+  background-color: var(--md-code-bg-color);
+  border: 1px solid var(--md-code-block-border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+/* Copy button style */
+.copy-button {
+  background-color: transparent;
+  color: var(--md-text-muted-color);
+}
+
+/* Footer styling */
+.md-footer {
+  background-color: var(--md-footer-bg-color);
+  color: var(--md-footer-fg-color);
+}
+
+/* ==== Color Variables ==== */
+
+/* Light Mode */
+body {
+  --md-default-bg-color: white;
+  --md-default-fg-color: rgba(0, 0, 0, 0.87);
+  --md-default-fg-color--light: rgba(0, 0, 0, 0.6);
+  --md-code-fg-color: rgba(0, 0, 0, 0.87);
+  --md-code-bg-color: #f4f4f4;
+  --md-code-block-bg-color: #f4f4f4;
+  --md-code-block-border-color: #dcdcdc;
+  --md-text-muted-color: #607d8b;
+  --md-footer-bg-color: #e0e0e0;
+  --md-footer-fg-color: #37474f;
+}
+
+/* Dark Mode */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #21262B;
+  --md-default-fg-color: #e0e0e0;
+  --md-default-fg-color--light: rgba(255, 255, 255, 0.7);
+  --md-code-fg-color: #e0e0e0;
+  --md-code-bg-color: #2b2b2b;
+  --md-code-block-bg-color: #2b2b2b;
+  --md-code-block-border-color: #444;
+  --md-text-muted-color: #90a4ae;
+  --md-footer-bg-color: #1a1e21;
+  --md-footer-fg-color: #b0bec5;
+}
+

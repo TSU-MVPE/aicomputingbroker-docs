@@ -1,0 +1,2817 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="getting-started.html">
+      
+      
+        <link rel="next" href="multinode-setup.html">
+      
+      
+      <link rel="icon" href="assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>📘 User Manual - Fujitsu AI Computing Broker Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="styles/enterprise.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10.6.1/dist/mermaid.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-computing-broker-acb-user-manual" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Fujitsu AI Computing Broker Documentation" class="md-header__button md-logo" aria-label="Fujitsu AI Computing Broker Documentation" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fujitsu AI Computing Broker Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📘 User Manual
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Fujitsu AI Computing Broker Documentation" class="md-nav__button md-logo" aria-label="Fujitsu AI Computing Broker Documentation" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    Fujitsu AI Computing Broker Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🏠 Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🚀 Quickstart Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    📘 User Manual
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="acb_manual.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    📘 User Manual
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-acb-operation-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. ACB Operation Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quick-start-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Quick Start Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-recommended-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Recommended Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Installation &amp; Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Installation &amp; Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-license-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. License Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. License Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-premises-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-Premises License
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud License
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-using-gpu-assigner" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Using GPU Assigner
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Using GPU Assigner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-launching-gpu-assigner" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Launching GPU Assigner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-selecting-gpu-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Selecting GPU Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-job-scheduling-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Job Scheduling Modes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Job Scheduling Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-simple-first-in-first-out-scheduling-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. simple: First-In, First-Out Scheduling (Default)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-gpu-sharing-concurrent-jobs-on-a-single-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. gpu-sharing: Concurrent Jobs on a Single GPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-gpu-affinity-optimized-scheduling-for-multi-gpu-jobs-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. gpu-affinity: Optimized Scheduling for Multi-GPU Jobs (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-gpu_assigner-cli-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. gpu_assigner CLI Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-gpu_assigner-start-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. gpu_assigner start Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-operation-mode-1-automatic-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Operation Mode 1: Automatic Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Operation Mode 1: Automatic Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Basic Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-agarun-command-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. agarun Command Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-example-running-single-gpu-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Example: Running Single-GPU Jobs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Example: Running Single-GPU Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-sample-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create Sample Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-single-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Run Single Job
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-example-running-multiple-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Example: Running Multiple Jobs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6. Example: Running Multiple Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-3-processes-in-a-2-gpu-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running 3 Processes in a 2-GPU Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-operation-mode-2-manual-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Operation Mode 2: Manual Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Operation Mode 2: Manual Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-integration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Integration Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sample-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Sample Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-running-manual-mode-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Running Manual Mode Programs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-key-api-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5. Key API Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-distributed-data-parallel-ddp-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Distributed Data Parallel (DDP) Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Distributed Data Parallel (DDP) Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-integration-steps-for-ddp" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Integration Steps for DDP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-sample-ddp-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Sample DDP Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-running-ddp-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Running DDP Programs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-ddp-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. DDP API Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5. DDP API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorchddpadaptivegpuallocator__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyTorchDDPAdaptiveGPUAllocator.__init__()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move_tensor_to_devicetensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_tensor_to_device(tensor)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-stopping-the-gpu-assigner" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Stopping the GPU Assigner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-exit-codes-error-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Exit Codes &amp; Error Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Exit Codes &amp; Error Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-agarun-exit-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1. agarun Exit Codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-gpu_assigner-exit-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2. gpu_assigner Exit Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-docker-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Docker Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Docker Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-gpu-assigner-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2. GPU Assigner Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-user-application-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3. User Application Containers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-docker-compose-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4. Docker Compose Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-running-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5. Running with Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96-license-port-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6. License &amp; Port Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multinode-setup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🖥️ Multi-Node Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cookbooks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    💡 Cookbooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api-reference.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📚 API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-acb-operation-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. ACB Operation Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quick-start-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Quick Start Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-recommended-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Recommended Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Installation &amp; Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Installation &amp; Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-license-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. License Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. License Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-premises-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-Premises License
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud License
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-using-gpu-assigner" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Using GPU Assigner
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Using GPU Assigner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-launching-gpu-assigner" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Launching GPU Assigner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-selecting-gpu-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Selecting GPU Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-job-scheduling-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Job Scheduling Modes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Job Scheduling Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-simple-first-in-first-out-scheduling-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. simple: First-In, First-Out Scheduling (Default)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-gpu-sharing-concurrent-jobs-on-a-single-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. gpu-sharing: Concurrent Jobs on a Single GPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-gpu-affinity-optimized-scheduling-for-multi-gpu-jobs-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. gpu-affinity: Optimized Scheduling for Multi-GPU Jobs (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-gpu_assigner-cli-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. gpu_assigner CLI Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-gpu_assigner-start-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. gpu_assigner start Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-operation-mode-1-automatic-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Operation Mode 1: Automatic Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Operation Mode 1: Automatic Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Basic Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-agarun-command-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. agarun Command Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-example-running-single-gpu-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Example: Running Single-GPU Jobs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Example: Running Single-GPU Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-sample-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create Sample Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-single-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Run Single Job
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-example-running-multiple-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Example: Running Multiple Jobs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6. Example: Running Multiple Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-3-processes-in-a-2-gpu-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running 3 Processes in a 2-GPU Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-operation-mode-2-manual-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Operation Mode 2: Manual Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Operation Mode 2: Manual Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-integration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Integration Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sample-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Sample Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-running-manual-mode-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Running Manual Mode Programs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-key-api-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5. Key API Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-distributed-data-parallel-ddp-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Distributed Data Parallel (DDP) Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Distributed Data Parallel (DDP) Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-integration-steps-for-ddp" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Integration Steps for DDP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-sample-ddp-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Sample DDP Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-running-ddp-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Running DDP Programs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-ddp-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. DDP API Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5. DDP API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorchddpadaptivegpuallocator__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyTorchDDPAdaptiveGPUAllocator.__init__()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move_tensor_to_devicetensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_tensor_to_device(tensor)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-stopping-the-gpu-assigner" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Stopping the GPU Assigner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-exit-codes-error-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Exit Codes &amp; Error Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Exit Codes &amp; Error Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-agarun-exit-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1. agarun Exit Codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-gpu_assigner-exit-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2. gpu_assigner Exit Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-docker-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Docker Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Docker Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1. Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-gpu-assigner-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2. GPU Assigner Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-user-application-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3. User Application Containers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-docker-compose-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4. Docker Compose Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-running-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5. Running with Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96-license-port-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6. License &amp; Port Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-computing-broker-acb-user-manual">AI Computing Broker (ACB) User Manual</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="11-overview">1.1. Overview</h3>
+<p>Fujitsu AI Computing Broker (ACB) is a runtime-aware middleware that optimizes GPU allocation and manages memory oversubscription, resulting in improved efficiency, higher throughput, and reduced computing costs.</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Runtime-Aware GPU Allocation</strong>: Monitors AI frameworks to allocate GPUs dynamically as needed</li>
+<li><strong>Full Memory Access</strong>: Active programs have access to the full GPU memory</li>
+<li><strong>Advanced Scheduling</strong>: Employs techniques like backfilling to optimize job placement and maximize aggregate utilization</li>
+<li><strong>Fast Deployment</strong>: No code changes required in Automatic Mode</li>
+</ul>
+<p><img alt="abst" src="assets/ACB_scheme.png" /></p>
+<hr />
+<h3 id="12-acb-operation-modes">1.2. ACB Operation Modes</h3>
+<p>ACB supports two primary operation modes:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+<th>Use Case</th>
+<th>Code Changes Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Automatic Mode</strong></td>
+<td>Uses <code>agarun</code> driver to automatically manage GPU allocation</td>
+<td>Standard PyTorch applications</td>
+<td>None - zero code changes</td>
+</tr>
+<tr>
+<td><strong>Manual Mode</strong></td>
+<td>Direct API integration for fine-grained control</td>
+<td>Performance-critical apps, specialized workflows</td>
+<td>Minimal - add API calls</td>
+</tr>
+</tbody>
+</table>
+<p>Both modes support:
+- <strong>Single-GPU jobs</strong>: Standard training/inference on one GPU
+- <strong>Multi-GPU DDP (Distributed Data Parallel)</strong>: Distributed training across multiple GPUs</p>
+<h3 id="13-quick-start-guide">1.3. Quick Start Guide</h3>
+<table>
+<thead>
+<tr>
+<th>What do you want to do?</th>
+<th>Go to Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Install ACB</td>
+<td><a href="#2-installation--setup">Section 2: Installation &amp; Setup</a></td>
+</tr>
+<tr>
+<td>Start GPU Assigner</td>
+<td><a href="#31-launching-gpu-assigner">Section 3.1: Launching GPU Assigner</a></td>
+</tr>
+<tr>
+<td>Run existing PyTorch code without changes</td>
+<td><a href="#4-operation-mode-1-automatic-mode">Section 4: Automatic Mode</a></td>
+</tr>
+<tr>
+<td>Fine-tune GPU allocation with API calls</td>
+<td><a href="#5-operation-mode-2-manual-mode">Section 5: Manual Mode</a></td>
+</tr>
+<tr>
+<td>Train with DDP (multi-GPU)</td>
+<td><a href="#6-distributed-data-parallel-ddp-mode">Section 6: DDP Mode</a></td>
+</tr>
+<tr>
+<td>Deploy ACB with Docker</td>
+<td><a href="#9-docker-deployment">Section 9: Docker Deployment</a></td>
+</tr>
+<tr>
+<td>Troubleshoot errors</td>
+<td><a href="#8-exit-codes--error-reference">Section 8: Exit Codes</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="14-recommended-environment">1.4. Recommended Environment</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Version / Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OS</strong></td>
+<td>Ubuntu 20.04.4 LTS +</td>
+</tr>
+<tr>
+<td><strong>GPU Driver</strong></td>
+<td>Driver: 535.171.04+<br>CUDA: 12.2+</td>
+</tr>
+<tr>
+<td><strong>Python</strong></td>
+<td>Python 3.10+</td>
+</tr>
+<tr>
+<td><strong>Python Libraries</strong></td>
+<td>torch 2.2.1+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Compatibility with newer versions of TensorFlow (2.16+) and Keras 3 is not currently supported. For best results, use the recommended versions listed above.</p>
+</blockquote>
+<hr />
+<h2 id="2-installation-setup">2. Installation &amp; Setup</h2>
+<h3 id="21-installation">2.1. Installation</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>ai-computing-broker
+</code></pre></div>
+<h3 id="22-license-setup">2.2. License Setup</h3>
+<h4 id="on-premises-license">On-Premises License</h4>
+<p>Place the <code>license.lic</code> file in the working directory where you run <code>gpu_assigner</code>. The application will automatically verify the license upon startup.</p>
+<h4 id="cloud-license">Cloud License</h4>
+<p>Configure the following environment variable with the API key provided to you:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ACB_KEY</span><span class="o">=</span><span class="s2">&quot;YOUR_ACB_KEY_HERE&quot;</span>
+</code></pre></div></p>
+<blockquote>
+<p><strong>Note</strong>: Both <code>license.lic</code> and <code>ACB_KEY</code> are provided by Fujitsu. To request access, please visit: https://en-documents.research.global.fujitsu.com/ai-computing-broker/</p>
+</blockquote>
+<hr />
+<h2 id="3-using-gpu-assigner">3. Using GPU Assigner</h2>
+<h3 id="31-launching-gpu-assigner">3.1. Launching GPU Assigner</h3>
+<p>Before running a user program that supports ACB, start <code>gpu_assigner</code>:
+<div class="highlight"><span class="filename">Start GPU assigner</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gpu_assigner<span class="w"> </span>start<span class="w">                     </span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&gt;<span class="w"> </span>INFO:<span class="w"> </span>Successfully<span class="w"> </span>started<span class="w"> </span>GPU<span class="w"> </span>Assigner<span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:11234
+</code></pre></div></p>
+<p>Confirm that it has been started:
+<div class="highlight"><span class="filename">GPU assigner status</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gpu_assigner<span class="w"> </span>status<span class="w">              </span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&gt;<span class="w"> </span>INFO:<span class="w"> </span>GPU<span class="w"> </span>assigner<span class="w"> </span>is<span class="w"> </span>running<span class="w"> </span>on<span class="w"> </span><span class="m">127</span>.0.0.1:11234<span class="w"> </span><span class="o">(</span><span class="nv">pid</span><span class="o">=</span><span class="m">13412</span><span class="o">)</span>
+</code></pre></div></p>
+<h3 id="32-selecting-gpu-devices">3.2. Selecting GPU Devices</h3>
+<p>In systems with multiple GPUs, ACB allows you to specify which devices should be managed by the GPU Assigner.</p>
+<p>By default, <code>gpu_assigner</code> allocates <strong>all available GPUs</strong> to user programs. To restrict ACB to specific devices, use the <code>--gpu-list</code> option when starting the assigner.</p>
+<ul>
+<li><strong>Device IDs</strong> correspond to those shown by the <code>nvidia-smi</code> command</li>
+<li><strong>Multiple devices</strong> should be comma-separated (e.g., <code>0,1,2</code>)</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>To start the GPU Assigner using GPU devices 0, 1, and 2:</p>
+<div class="highlight"><span class="filename">Start GPU assigner with GPU list</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>gpu_assigner<span class="w"> </span>start<span class="w"> </span>--gpu-list<span class="w"> </span><span class="m">0</span>,1,2
+</code></pre></div>
+<h3 id="33-job-scheduling-modes">3.3. Job Scheduling Modes</h3>
+<p>The AI Computing Broker (ACB) supports multiple scheduling strategies to optimize GPU utilization across diverse workloads. Each scheduler is designed for specific use cases and can be selected via the <code>--scheduler</code> flag when starting the GPU Assigner.</p>
+<h4 id="331-simple-first-in-first-out-scheduling-default">3.3.1. <code>simple</code>: First-In, First-Out Scheduling (Default)</h4>
+<p>This is the default scheduler, operating on a First-In, First-Out (FIFO) basis. Jobs are assigned to GPUs in the order they are submitted. Each job receives dedicated GPU resources, and the scheduler prioritizes completing jobs in their submission order. This scheduler is suitable for single-GPU, single-node workloads where simplicity and predictable job execution order are paramount.</p>
+<p>Use <code>--scheduler simple</code> to explicitly enable this scheduler.</p>
+<h4 id="332-gpu-sharing-concurrent-jobs-on-a-single-gpu">3.3.2. <code>gpu-sharing</code>: Concurrent Jobs on a Single GPU</h4>
+<p>This scheduler enables multiple jobs to share a single GPU, provided their combined memory usage fits within the GPU's capacity. It is ideal for lightweight models or inference tasks that do not require full GPU memory.</p>
+<p>To use the gpu-sharing scheduler, specify <code>--scheduler gpu-sharing</code> when starting <code>gpu_assigner</code>.</p>
+<h4 id="333-gpu-affinity-optimized-scheduling-for-multi-gpu-jobs-recommended">3.3.3. <code>gpu-affinity</code>: Optimized Scheduling for Multi-GPU Jobs (Recommended)</h4>
+<p>The <code>gpu-affinity</code> scheduler is designed for workloads that span multiple GPUs. It builds on FIFO scheduling but introduces two advanced features to improve efficiency:</p>
+<ul>
+<li><strong>Backfill Scheduling</strong>: Opportunistically fills idle GPU slots with smaller jobs while larger jobs are queued, increasing overall GPU utilization without strictly following job submission order</li>
+<li><strong>GPU Affinity</strong>: Prevents GPU migration during job execution by assigning jobs to specific GPUs, reducing memory overhead and improving performance by maintaining memory locality</li>
+</ul>
+<p>This scheduler is ideal for environments where job sizes vary and minimizing memory fragmentation is critical.</p>
+<p>To enable <code>gpu-affinity</code>, start the GPU Assigner with the following command:</p>
+<div class="highlight"><span class="filename">Start GPU assigner with gpu affinity scheduling</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>gpu_assigner<span class="w"> </span>start<span class="w"> </span>--scheduler<span class="w"> </span>gpu-affinity
+</code></pre></div>
+<h3 id="34-gpu_assigner-cli-reference">3.4. <code>gpu_assigner</code> CLI Reference</h3>
+<ul>
+<li><strong>GPU Assigner Options Help</strong>: <code>gpu_assigner -h</code></li>
+</ul>
+<p>Displays a list of GPU Assigner options.
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ gpu_assigner -h
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>usage: gpu_assigner [-h] 
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>                    [--address ADDRESS] 
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>                    [--port PORT] 
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>                    [--pid-file-path PID_FILE_PATH]
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>                    {start,status,stop} ...
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>positional arguments:
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  {start,status,stop}   GPU Assigner commands
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    start               start GPU Assigner
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    status              show the status of GPU Assigner
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    stop                stop GPU Assigner
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>options:
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>  -h, --help            show this help message and exit
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>GPU Assigner options:
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>  --address ADDRESS     GPU Assigner address (default: 127.0.0.1)
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>  --port PORT           GPU Assigner port (default: 11234)
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>Pid File options:
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>  --pid-file-path PID_FILE_PATH
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>                        pid file path (default: $HOME/.acb/gpu-assigner.pid)
+</code></pre></div></p>
+<ul>
+<li><strong>Changing the Address</strong> (<code>--address</code>)</li>
+</ul>
+<p>The default address used by GPU Assigner is <code>127.0.0.1</code>.
+  To use a different address, set it with the <code>--address</code> option at runtime.
+  The <code>--address</code> option must be specified before the <code>start</code>/<code>status</code>/<code>stop</code> commands.</p>
+<div class="highlight"><pre><span></span><code>```sh title=&quot;GPU_assigner options&quot;
+gpu_assigner --address &lt;IP address&gt; [start|status|stop]
+```
+</code></pre></div>
+<ul>
+<li><strong>Changing the Port Number</strong> (<code>--port</code>)</li>
+</ul>
+<p>The default port number used by GPU Assigner is <code>11234</code>.
+  To use a different port number, set it with the <code>--port</code> option at runtime.
+  The <code>--port</code> option must be specified before the <code>start</code>/<code>status</code>/<code>stop</code> commands.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>gpu_assigner<span class="w"> </span>--port<span class="w"> </span>&lt;port<span class="w"> </span>number&gt;<span class="w"> </span><span class="o">[</span>start<span class="p">|</span>status<span class="p">|</span>stop<span class="o">]</span>
+</code></pre></div>
+<p>When executing a user program using ACB with a custom port, set the port number in the environment variable <code>AGA_GPU_ALLOC_SERVER_PORT</code> before running <code>agarun</code>. For details, refer to section 4.1.</p>
+<ul>
+<li><strong>Specifying the PID File</strong> (<code>--pid-file-path</code>)</li>
+</ul>
+<p>A PID file is created to manage the process ID and state of the GPU Assigner. By default, <code>$HOME/.acb/gpu-assigner.pid</code> is created.
+  To change the path of the PID file, specify it with the <code>--pid-file-path</code> option at runtime.
+  The <code>--pid-file-path</code> option must be specified before the <code>start</code>/<code>status</code>/<code>stop</code> commands.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>gpu_assigner<span class="w"> </span>--pid-file-path<span class="w"> </span>&lt;PID<span class="w"> </span>file<span class="w"> </span>path&gt;<span class="w"> </span><span class="o">[</span>start<span class="p">|</span>status<span class="p">|</span>stop<span class="o">]</span>
+</code></pre></div>
+<h3 id="35-gpu_assigner-start-arguments">3.5. <code>gpu_assigner start</code> Arguments</h3>
+<p>Arguments for the <code>gpu_assigner start</code> command should be specified after the <code>start</code> command.</p>
+<ul>
+<li><strong>Help for the <code>gpu_assigner start</code> command</strong>: <code>gpu_assigner start -h</code></li>
+</ul>
+<p>Displays a list of arguments for <code>gpu_assigner start</code>.</p>
+<div class="highlight"><pre><span></span><code>```
+$ gpu_assigner start -h
+usage: gpu_assigner start [-h] [--exe-est-start-count EXE_EST_START_COUNT]
+                            [--exe-est-latest-count EXE_EST_LATEST_COUNT] [--exe-est-interval EXE_EST_INTERVAL]
+                            [--exe-est-percentile EXE_EST_PERCENTILE]
+                            [--exe-est-default-execution-time EXE_EST_DEFAULT_EXECUTION_TIME]
+                            [--gpu-assigner-working-directory GPU_ASSIGNER_WORKING_DIRECTORY]
+                            [--gpu-assigner-max-workers GPU_ASSIGNER_MAX_WORKERS]
+                            [--gpu-assigner-execution-time GPU_ASSIGNER_EXECUTION_TIME] [--log-path LOG_PATH] [-v]
+                            [--scheduler SCHEDULER] [--gpu-list GPU_LIST]
+                            [--mem-est-start-count MEM_EST_START_COUNT] [--mem-est-interval MEM_EST_INTERVAL]
+                            [--mem-est-data-max-len MEM_EST_DATA_MAX_LEN]
+                            [--mem-est-percentile MEM_EST_PERCENTILE] [--mem-est-fixed-ratio MEM_EST_FIXED_RATIO]
+                            [--mem-est-select-strategy MEM_EST_SELECT_STRATEGY]
+                            [--res-mem-manager-resident-memory-threshold RES_MEM_MANAGER_RESIDENT_MEMORY_THRESHOLD]
+
+options:
+    -h, --help            show this help message and exit
+
+Execution Time Estimator (exe-est) options:
+    --exe-est-start-count EXE_EST_START_COUNT
+                        the count at which the estimator starts (default: 10)
+    --exe-est-latest-count EXE_EST_LATEST_COUNT
+                        the latest count of execution time which the estimator uses. (default: 100)
+    --exe-est-interval EXE_EST_INTERVAL
+                        the interval at which the estimator updates (default: 10)
+    --exe-est-percentile EXE_EST_PERCENTILE
+                        the percentile used by the estimator. (default: 0.9)
+    --exe-est-default-execution-time EXE_EST_DEFAULT_EXECUTION_TIME
+                        set the default execution time of a job with unknown execution time (msec). (default: 0)
+
+GPU Assigner options:
+    --gpu-assigner-working-directory GPU_ASSIGNER_WORKING_DIRECTORY
+                        working directory of GPU Assigner (default: None)
+    --gpu-assigner-max-workers GPU_ASSIGNER_MAX_WORKERS
+                        max workers of GPU Assigner (default: 128)
+    --gpu-assigner-execution-time GPU_ASSIGNER_EXECUTION_TIME
+                        Execution time of GPU Assigner (default: None)
+
+Log options:
+    --log-path LOG_PATH   log path (default: $HOME/.acb/gpu-assigner.log)
+    -v, --verbose         verbose logging (default: False)
+
+Scheduler options:
+    --scheduler SCHEDULER
+                        scheduler type (default: simple)
+    --gpu-list GPU_LIST   allowed GPU device indices (default: None)
+
+Peak Memory Estimator (mem-est) options:
+    --mem-est-start-count MEM_EST_START_COUNT
+                        the count at which the estimator starts (default: 10)
+    --mem-est-interval MEM_EST_INTERVAL
+                        the interval at which the estimator updates (default: 10)
+    --mem-est-data-max-len MEM_EST_DATA_MAX_LEN
+                        the latest count of peak memory usage which the estimator uses. (default: 100)
+    --mem-est-percentile MEM_EST_PERCENTILE
+                        the percentile used by the estimator. (default: 0.99)
+    --mem-est-fixed-ratio MEM_EST_FIXED_RATIO
+                        the ratio by which the estimator multiply the max peak memory usage. (default: 1.1)
+    --mem-est-select-strategy MEM_EST_SELECT_STRATEGY
+                        whether to use max or min for calculating the allocation memory from user-given and
+                        system-detected memories (default: min)
+
+Resident memory manager options:
+    --res-mem-manager-resident-memory-threshold RES_MEM_MANAGER_RESIDENT_MEMORY_THRESHOLD
+                        set the resident memory threshold of GPU memory (default: 0.25)
+```
+</code></pre></div>
+<ul>
+<li><strong>Specifying the Log File</strong> (<code>--log-path</code>)</li>
+</ul>
+<p>The log file created by GPU Assigner is <code>$HOME/.acb/gpu-assigner.log</code> by default.
+  To change the log file path, specify it with the <code>--log-path</code> option at runtime.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>gpu_assigner<span class="w"> </span>start<span class="w"> </span>--log-path<span class="w"> </span>&lt;path_to_log_file&gt;
+</code></pre></div>
+<ul>
+<li><strong>Specifying the Scheduler</strong> (<code>--scheduler</code>)</li>
+</ul>
+<p>Argument to specify the type of scheduler:
+  - <code>simple</code>: Default scheduler. Use when all jobs are single-GPU jobs.
+  - <code>gpu-sharing</code>: Use when all jobs are single-GPU jobs and the memory consumption of the jobs is smaller than the memory size of one GPU.</p>
+<div class="highlight"><pre><span></span><code>```sh
+gpu_assigner start --scheduler gpu-sharing
+```
+</code></pre></div>
+<ul>
+<li>
+<p><code>gpu-affinity</code>: Use when executing multi-GPU jobs.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>gpu_assigner<span class="w"> </span>start<span class="w"> </span>--scheduler<span class="w"> </span>gpu-affinity
+</code></pre></div>
+</li>
+<li>
+<p><strong>Specifying GPU Devices</strong> (<code>--gpu-list</code>)</p>
+</li>
+</ul>
+<p>Argument to specify which GPUs to use. Pass a comma-separated list of GPU device indices. The default is to use all available GPUs.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>gpu_assigner<span class="w"> </span>start<span class="w"> </span>--gpu-list<span class="w"> </span><span class="m">0</span>,1,2
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Execution Time Prediction Feature Options</strong></p>
+</li>
+<li>
+<p><code>--exe-est-default-execution-time &lt;time:int&gt;</code>: Maximum execution time (in milliseconds) used when the job's execution time is not registered (default: 0). Used to find backfillable jobs when the execution time of a job scheduled from the FIFO queue is unknown.</p>
+</li>
+<li><code>--exe-est-start-count &lt;start_count:int&gt;</code>: The number of data points required to start estimating the maximum execution time (default: 10)</li>
+<li><code>--exe-est-latest-count &lt;latest_count:int&gt;</code>: The number of recent data points to use for maximum execution time estimation (default: 100)</li>
+<li><code>--exe-est-interval &lt;interval:int&gt;</code>: The number of data points between updates to the maximum execution time estimate (default: 10)</li>
+<li>
+<p><code>--exe-est-percentile &lt;percentile:float&gt;</code>: The percentile value for maximum execution time estimation (default: 0.9)</p>
+</li>
+<li>
+<p><strong>Runtime Context Memory Management Feature Options</strong></p>
+</li>
+<li>
+<p><code>--res-mem-manager-resident-memory-threshold &lt;threshold:float&gt;</code>: Threshold for limiting GPU migration of single-GPU jobs, specified as the ratio of runtime context memory in GPU memory (default: 0.25). If the amount of context memory in GPU memory is less than the threshold, allocation ignoring GPU Affinity is possible.</p>
+</li>
+</ul>
+<h2 id="4-operation-mode-1-automatic-mode">4. Operation Mode 1: Automatic Mode</h2>
+<h3 id="41-overview">4.1. Overview</h3>
+<p>Automatic Mode allows you to run <strong>unmodified PyTorch programs</strong> with ACB by simply using the <code>agarun</code> driver command. This mode requires:
+- <strong>Zero code changes</strong> in your application
+- Setting the <code>AGA_ENABLE_AUTO=1</code> environment variable
+- Running your program through <code>agarun</code></p>
+<h3 id="42-basic-usage">4.2. Basic Usage</h3>
+<p>Execute user programs by passing them as arguments to the driver command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>python<span class="w"> </span>sample.py
+</code></pre></div>
+<p>If your program uses command-line options, add <code>--</code> after <code>agarun</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>--<span class="w"> </span>python<span class="w"> </span>sample.py<span class="w"> </span>--batch-size<span class="w"> </span><span class="m">32</span><span class="w"> </span>--epochs<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+<h3 id="43-environment-variables">4.3. Environment Variables</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Default</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AGA_ENABLE_AUTO</code></td>
+<td>Enable Automatic Mode (required)</td>
+<td>-</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>AGA_GPU_ALLOC_SERVER_PORT</code></td>
+<td>GPU Assigner port number</td>
+<td><code>11234</code></td>
+<td><code>12345</code></td>
+</tr>
+<tr>
+<td><code>AGA_REQUEST_DEVICE</code></td>
+<td>Device to request</td>
+<td><code>any</code></td>
+<td><code>cuda</code>, <code>cpu</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Changing the Port Number:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">AGA_GPU_ALLOC_SERVER_PORT</span><span class="o">=</span><span class="m">12345</span><span class="w"> </span><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>python<span class="w"> </span>sample.py
+</code></pre></div>
+<p><strong>Specifying Device Type:</strong></p>
+<ul>
+<li><code>any</code>: Request GPU, run on CPU if unavailable (default)</li>
+<li><code>cuda</code> or <code>gpu</code>: Request GPU, wait if none available</li>
+<li><code>cpu</code>: Use CPU only</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nv">AGA_REQUEST_DEVICE</span><span class="o">=</span>cuda<span class="w"> </span><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>python<span class="w"> </span>sample.py
+</code></pre></div>
+<h3 id="44-agarun-command-reference">4.4. <code>agarun</code> Command Reference</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>usage: agarun [-h] [--without-aga] [--history-path HISTORY_PATH]
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>              [--checkpoints-topdir CHECKPOINTS_TOPDIR]
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>              args [args ...]
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>CLI to run your program with AGA enabled
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>positional arguments:
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>  args                  Command to run with AGA enabled
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>options:
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>  -h, --help            show this help message and exit
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>  --without-aga         Disable GPU scheduling with AGA (for assessment purpose)
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>  --history-path HISTORY_PATH
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>                        Path of the job history file (default: $HOME/.acb/job-history.log)
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>  --checkpoints-topdir CHECKPOINTS_TOPDIR
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>                        Directory where checkpoint directories for each job are stored
+</code></pre></div>
+<p><strong>Job History Tracking</strong> (<code>--history-path</code>):</p>
+<p>Job history records timestamps and call arguments during ACB job execution, useful for analyzing job execution status and ACB effectiveness.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>--history-path<span class="w"> </span>./my-job-history.log<span class="w"> </span>python<span class="w"> </span>sample.py
+</code></pre></div>
+<h3 id="45-example-running-single-gpu-jobs">4.5. Example: Running Single-GPU Jobs</h3>
+<h4 id="step-1-create-sample-program">Step 1: Create Sample Program</h4>
+<p>Create <code>sample_pytorch.py</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="sd">&quot;&quot;&quot;Sample script using Automatic AGA (pytorch version).&quot;&quot;&quot;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">optim</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="c1"># [AGA] When using AGA, use get_raw_device function to get the actual device</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>    <span class="c1"># [AGA] Ensure running in auto AGA mode if the program was launched from agarun</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">adaptive_gpu_allocator.env</span><span class="w"> </span><span class="kn">import</span> <span class="n">ensure_auto_mode</span><span class="p">,</span> <span class="n">launched_from_agarun</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">adaptive_gpu_allocator.pytorch_automatic</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_raw_device</span> <span class="k">as</span> <span class="n">get_device</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>    <span class="k">if</span> <span class="n">launched_from_agarun</span><span class="p">():</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>        <span class="n">ensure_auto_mode</span><span class="p">()</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_device</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a>        <span class="k">return</span> <span class="n">tensor</span><span class="o">.</span><span class="n">device</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a>
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a><span class="c1"># Time to sleep for checking GPU auto-release</span>
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a><span class="n">sleep_time</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a>
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a>
+<a id="__codelineno-23-29" name="__codelineno-23-29" href="#__codelineno-23-29"></a><span class="c1"># Define the network architecture</span>
+<a id="__codelineno-23-30" name="__codelineno-23-30" href="#__codelineno-23-30"></a><span class="k">class</span><span class="w"> </span><span class="nc">Net</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<a id="__codelineno-23-31" name="__codelineno-23-31" href="#__codelineno-23-31"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-23-32" name="__codelineno-23-32" href="#__codelineno-23-32"></a>        <span class="nb">super</span><span class="p">(</span><span class="n">Net</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<a id="__codelineno-23-33" name="__codelineno-23-33" href="#__codelineno-23-33"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Input layer</span>
+<a id="__codelineno-23-34" name="__codelineno-23-34" href="#__codelineno-23-34"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-23-35" name="__codelineno-23-35" href="#__codelineno-23-35"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Output layer</span>
+<a id="__codelineno-23-36" name="__codelineno-23-36" href="#__codelineno-23-36"></a>
+<a id="__codelineno-23-37" name="__codelineno-23-37" href="#__codelineno-23-37"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-23-38" name="__codelineno-23-38" href="#__codelineno-23-38"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<a id="__codelineno-23-39" name="__codelineno-23-39" href="#__codelineno-23-39"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+<a id="__codelineno-23-40" name="__codelineno-23-40" href="#__codelineno-23-40"></a>            <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<a id="__codelineno-23-41" name="__codelineno-23-41" href="#__codelineno-23-41"></a>        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-23-42" name="__codelineno-23-42" href="#__codelineno-23-42"></a>        <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-23-43" name="__codelineno-23-43" href="#__codelineno-23-43"></a>
+<a id="__codelineno-23-44" name="__codelineno-23-44" href="#__codelineno-23-44"></a>
+<a id="__codelineno-23-45" name="__codelineno-23-45" href="#__codelineno-23-45"></a><span class="k">def</span><span class="w"> </span><span class="nf">fix_seeds</span><span class="p">():</span>
+<a id="__codelineno-23-46" name="__codelineno-23-46" href="#__codelineno-23-46"></a>    <span class="c1"># fix seeds for reproducibility</span>
+<a id="__codelineno-23-47" name="__codelineno-23-47" href="#__codelineno-23-47"></a>    <span class="n">seed</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-23-48" name="__codelineno-23-48" href="#__codelineno-23-48"></a>    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+<a id="__codelineno-23-49" name="__codelineno-23-49" href="#__codelineno-23-49"></a>    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+<a id="__codelineno-23-50" name="__codelineno-23-50" href="#__codelineno-23-50"></a>    <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+<a id="__codelineno-23-51" name="__codelineno-23-51" href="#__codelineno-23-51"></a>    <span class="n">torch</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">cudnn</span><span class="o">.</span><span class="n">benchmark</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-23-52" name="__codelineno-23-52" href="#__codelineno-23-52"></a>    <span class="n">torch</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">cudnn</span><span class="o">.</span><span class="n">deterministic</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-23-53" name="__codelineno-23-53" href="#__codelineno-23-53"></a>
+<a id="__codelineno-23-54" name="__codelineno-23-54" href="#__codelineno-23-54"></a>
+<a id="__codelineno-23-55" name="__codelineno-23-55" href="#__codelineno-23-55"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_training_data</span><span class="p">():</span>
+<a id="__codelineno-23-56" name="__codelineno-23-56" href="#__codelineno-23-56"></a>    <span class="c1"># Assume we have some data in X_train and y_train</span>
+<a id="__codelineno-23-57" name="__codelineno-23-57" href="#__codelineno-23-57"></a>    <span class="n">X_train</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>  <span class="c1"># 10000000 samples, 20 features each</span>
+<a id="__codelineno-23-58" name="__codelineno-23-58" href="#__codelineno-23-58"></a>    <span class="n">y_train</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>  <span class="c1"># 10000000 samples, 1 target value each</span>
+<a id="__codelineno-23-59" name="__codelineno-23-59" href="#__codelineno-23-59"></a>    <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span>
+<a id="__codelineno-23-60" name="__codelineno-23-60" href="#__codelineno-23-60"></a>
+<a id="__codelineno-23-61" name="__codelineno-23-61" href="#__codelineno-23-61"></a>
+<a id="__codelineno-23-62" name="__codelineno-23-62" href="#__codelineno-23-62"></a><span class="k">def</span><span class="w"> </span><span class="nf">init_model_and_optimizer</span><span class="p">():</span>
+<a id="__codelineno-23-63" name="__codelineno-23-63" href="#__codelineno-23-63"></a>    <span class="c1"># Create the network</span>
+<a id="__codelineno-23-64" name="__codelineno-23-64" href="#__codelineno-23-64"></a>    <span class="n">net</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span>
+<a id="__codelineno-23-65" name="__codelineno-23-65" href="#__codelineno-23-65"></a>
+<a id="__codelineno-23-66" name="__codelineno-23-66" href="#__codelineno-23-66"></a>    <span class="c1"># Define a Loss function and optimizer</span>
+<a id="__codelineno-23-67" name="__codelineno-23-67" href="#__codelineno-23-67"></a>    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+<a id="__codelineno-23-68" name="__codelineno-23-68" href="#__codelineno-23-68"></a>
+<a id="__codelineno-23-69" name="__codelineno-23-69" href="#__codelineno-23-69"></a>    <span class="k">return</span> <span class="n">net</span><span class="p">,</span> <span class="n">optimizer</span>
+<a id="__codelineno-23-70" name="__codelineno-23-70" href="#__codelineno-23-70"></a>
+<a id="__codelineno-23-71" name="__codelineno-23-71" href="#__codelineno-23-71"></a>
+<a id="__codelineno-23-72" name="__codelineno-23-72" href="#__codelineno-23-72"></a><span class="k">def</span><span class="w"> </span><span class="nf">train_step</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span>
+<a id="__codelineno-23-73" name="__codelineno-23-73" href="#__codelineno-23-73"></a>    <span class="c1"># Zero the gradients</span>
+<a id="__codelineno-23-74" name="__codelineno-23-74" href="#__codelineno-23-74"></a>    <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+<a id="__codelineno-23-75" name="__codelineno-23-75" href="#__codelineno-23-75"></a>
+<a id="__codelineno-23-76" name="__codelineno-23-76" href="#__codelineno-23-76"></a>    <span class="c1"># Forward pass</span>
+<a id="__codelineno-23-77" name="__codelineno-23-77" href="#__codelineno-23-77"></a>    <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<a id="__codelineno-23-78" name="__codelineno-23-78" href="#__codelineno-23-78"></a>
+<a id="__codelineno-23-79" name="__codelineno-23-79" href="#__codelineno-23-79"></a>    <span class="c1"># Calculate loss</span>
+<a id="__codelineno-23-80" name="__codelineno-23-80" href="#__codelineno-23-80"></a>    <span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
+<a id="__codelineno-23-81" name="__codelineno-23-81" href="#__codelineno-23-81"></a>    <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<a id="__codelineno-23-82" name="__codelineno-23-82" href="#__codelineno-23-82"></a>
+<a id="__codelineno-23-83" name="__codelineno-23-83" href="#__codelineno-23-83"></a>    <span class="c1"># Backward pass and optimization</span>
+<a id="__codelineno-23-84" name="__codelineno-23-84" href="#__codelineno-23-84"></a>    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+<a id="__codelineno-23-85" name="__codelineno-23-85" href="#__codelineno-23-85"></a>    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+<a id="__codelineno-23-86" name="__codelineno-23-86" href="#__codelineno-23-86"></a>
+<a id="__codelineno-23-87" name="__codelineno-23-87" href="#__codelineno-23-87"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">}</span><span class="s2">, Loss: </span><span class="si">{</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s2"> on </span><span class="si">{</span><span class="n">get_device</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-23-88" name="__codelineno-23-88" href="#__codelineno-23-88"></a>
+<a id="__codelineno-23-89" name="__codelineno-23-89" href="#__codelineno-23-89"></a>    <span class="c1"># Sleep for a few seconds to auto-release GPU</span>
+<a id="__codelineno-23-90" name="__codelineno-23-90" href="#__codelineno-23-90"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sleep </span><span class="si">{</span><span class="n">sleep_time</span><span class="si">}</span><span class="s2"> sec&quot;</span><span class="p">)</span>
+<a id="__codelineno-23-91" name="__codelineno-23-91" href="#__codelineno-23-91"></a>    <span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span><span class="p">)</span>
+<a id="__codelineno-23-92" name="__codelineno-23-92" href="#__codelineno-23-92"></a>
+<a id="__codelineno-23-93" name="__codelineno-23-93" href="#__codelineno-23-93"></a>
+<a id="__codelineno-23-94" name="__codelineno-23-94" href="#__codelineno-23-94"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-23-95" name="__codelineno-23-95" href="#__codelineno-23-95"></a>    <span class="n">fix_seeds</span><span class="p">()</span>
+<a id="__codelineno-23-96" name="__codelineno-23-96" href="#__codelineno-23-96"></a>
+<a id="__codelineno-23-97" name="__codelineno-23-97" href="#__codelineno-23-97"></a>    <span class="c1"># init model and aga client</span>
+<a id="__codelineno-23-98" name="__codelineno-23-98" href="#__codelineno-23-98"></a>    <span class="n">net</span><span class="p">,</span> <span class="n">optimizer</span> <span class="o">=</span> <span class="n">init_model_and_optimizer</span><span class="p">()</span>
+<a id="__codelineno-23-99" name="__codelineno-23-99" href="#__codelineno-23-99"></a>
+<a id="__codelineno-23-100" name="__codelineno-23-100" href="#__codelineno-23-100"></a>    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">get_training_data</span><span class="p">()</span>
+<a id="__codelineno-23-101" name="__codelineno-23-101" href="#__codelineno-23-101"></a>    <span class="n">net</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+<a id="__codelineno-23-102" name="__codelineno-23-102" href="#__codelineno-23-102"></a>
+<a id="__codelineno-23-103" name="__codelineno-23-103" href="#__codelineno-23-103"></a>    <span class="n">n_epoch</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-23-104" name="__codelineno-23-104" href="#__codelineno-23-104"></a>    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_epoch</span><span class="p">):</span>
+<a id="__codelineno-23-105" name="__codelineno-23-105" href="#__codelineno-23-105"></a>        <span class="n">train_step</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epoch</span><span class="p">)</span>
+<a id="__codelineno-23-106" name="__codelineno-23-106" href="#__codelineno-23-106"></a>
+<a id="__codelineno-23-107" name="__codelineno-23-107" href="#__codelineno-23-107"></a>
+<a id="__codelineno-23-108" name="__codelineno-23-108" href="#__codelineno-23-108"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-23-109" name="__codelineno-23-109" href="#__codelineno-23-109"></a>    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="step-2-run-single-job">Step 2: Run Single Job</h4>
+<p>Execute the program using <code>agarun</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>python<span class="w"> </span>sample_pytorch.py
+</code></pre></div>
+<p><strong>Expected Output:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Epoch 0, Loss: 1.0307303667068481 on cuda:0
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>sleep 3 sec
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Epoch 1, Loss: 1.029717206954956 on cuda:1
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>sleep 3 sec
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>Epoch 2, Loss: 1.0287171602249146 on cuda:0
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>sleep 3 sec
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>[...]
+</code></pre></div>
+<p>Note how the GPU device changes dynamically between epochs as ACB manages GPU allocation.</p>
+<h3 id="46-example-running-multiple-jobs">4.6. Example: Running Multiple Jobs</h3>
+<p>This example shows how ACB manages more jobs than available GPUs (e.g., 3 jobs on 2 GPUs).</p>
+<h4 id="running-3-processes-in-a-2-gpu-environment">Running 3 Processes in a 2-GPU Environment</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>python<span class="w"> </span>sample_pytorch.py<span class="w"> </span>&gt;log1<span class="w"> </span><span class="p">&amp;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>python<span class="w"> </span>sample_pytorch.py<span class="w"> </span>&gt;log2<span class="w"> </span><span class="p">&amp;</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>agarun<span class="w"> </span>python<span class="w"> </span>sample_pytorch.py<span class="w"> </span>&gt;log3<span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div>
+<p><strong>Key Observations:</strong></p>
+<ul>
+<li>GPUs are allocated dynamically when needed</li>
+<li>Each process may use different GPUs at different times</li>
+<li>ACB automatically schedules GPU access to maximize utilization</li>
+</ul>
+<p><strong>Sample Output (log1):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Epoch 0, Loss: 1.0307303667068481 on cuda:1
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>sleep 3 sec
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Epoch 1, Loss: 1.029717206954956 on cuda:1
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>sleep 3 sec
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>Epoch 2, Loss: 1.0287171602249146 on cuda:1
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>sleep 3 sec
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>Epoch 3, Loss: 1.0277304649353027 on cuda:0  # GPU switched
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>sleep 3 sec
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>[...]
+</code></pre></div></p>
+<hr />
+<h2 id="5-operation-mode-2-manual-mode">5. Operation Mode 2: Manual Mode</h2>
+<h3 id="51-overview">5.1. Overview</h3>
+<p>Manual Mode provides <strong>direct API integration</strong> for fine-grained control over GPU allocation. Use this mode when:</p>
+<ul>
+<li>You need maximum performance tuning</li>
+<li>Your application has specialized GPU workflows</li>
+<li>You want explicit control over GPU allocation timing</li>
+</ul>
+<p><strong>Key Differences from Automatic Mode:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Automatic Mode</th>
+<th>Manual Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code changes</td>
+<td>None</td>
+<td>Minimal API calls required</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>Automatic</td>
+<td>Explicit control points</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>Standard applications</td>
+<td>Performance-critical apps</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-integration-steps">5.2. Integration Steps</h3>
+<p>Follow these steps to integrate ACB Manual Mode into your PyTorch application:</p>
+<ol>
+<li><strong>Import <code>PyTorchAdaptiveGPUAllocator</code></strong></li>
+<li><strong>Import <code>ensure_manual_mode_without_restart</code></strong></li>
+<li><strong>Execute <code>ensure_manual_mode_without_restart()</code></strong> - validates environment variables</li>
+<li><strong>Initialize <code>PyTorchAdaptiveGPUAllocator</code></strong> with model and optimizer</li>
+<li><strong>Mark GPU processing boundaries</strong> using <code>on_device_begin()</code> and <code>on_device_end()</code></li>
+</ol>
+<h3 id="53-sample-code">5.3. Sample Code</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">optim</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="c1"># [AGA] Import Manual Mode API</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">adaptive_gpu_allocator.env</span><span class="w"> </span><span class="kn">import</span> <span class="n">ensure_manual_mode_without_restart</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">adaptive_gpu_allocator.pytorch</span><span class="w"> </span><span class="kn">import</span> <span class="n">PyTorchAdaptiveGPUAllocator</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a><span class="c1"># [AGA] Ensure running in manual mode</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a><span class="n">ensure_manual_mode_without_restart</span><span class="p">()</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a><span class="c1"># Global AGA client variable</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a><span class="n">aga</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>
+<a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a><span class="k">class</span><span class="w"> </span><span class="nc">Net</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a>        <span class="nb">super</span><span class="p">(</span><span class="n">Net</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-28-24" name="__codelineno-28-24" href="#__codelineno-28-24"></a>
+<a id="__codelineno-28-25" name="__codelineno-28-25" href="#__codelineno-28-25"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-28-26" name="__codelineno-28-26" href="#__codelineno-28-26"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<a id="__codelineno-28-27" name="__codelineno-28-27" href="#__codelineno-28-27"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+<a id="__codelineno-28-28" name="__codelineno-28-28" href="#__codelineno-28-28"></a>            <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<a id="__codelineno-28-29" name="__codelineno-28-29" href="#__codelineno-28-29"></a>        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-28-30" name="__codelineno-28-30" href="#__codelineno-28-30"></a>        <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-28-31" name="__codelineno-28-31" href="#__codelineno-28-31"></a>
+<a id="__codelineno-28-32" name="__codelineno-28-32" href="#__codelineno-28-32"></a><span class="k">def</span><span class="w"> </span><span class="nf">train_step</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span>
+<a id="__codelineno-28-33" name="__codelineno-28-33" href="#__codelineno-28-33"></a>    <span class="k">global</span> <span class="n">aga</span>
+<a id="__codelineno-28-34" name="__codelineno-28-34" href="#__codelineno-28-34"></a>
+<a id="__codelineno-28-35" name="__codelineno-28-35" href="#__codelineno-28-35"></a>    <span class="c1"># [AGA] Mark GPU processing start</span>
+<a id="__codelineno-28-36" name="__codelineno-28-36" href="#__codelineno-28-36"></a>    <span class="n">aga</span><span class="o">.</span><span class="n">on_device_begin</span><span class="p">()</span>
+<a id="__codelineno-28-37" name="__codelineno-28-37" href="#__codelineno-28-37"></a>
+<a id="__codelineno-28-38" name="__codelineno-28-38" href="#__codelineno-28-38"></a>    <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+<a id="__codelineno-28-39" name="__codelineno-28-39" href="#__codelineno-28-39"></a>    <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<a id="__codelineno-28-40" name="__codelineno-28-40" href="#__codelineno-28-40"></a>    <span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
+<a id="__codelineno-28-41" name="__codelineno-28-41" href="#__codelineno-28-41"></a>    <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<a id="__codelineno-28-42" name="__codelineno-28-42" href="#__codelineno-28-42"></a>    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+<a id="__codelineno-28-43" name="__codelineno-28-43" href="#__codelineno-28-43"></a>    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+<a id="__codelineno-28-44" name="__codelineno-28-44" href="#__codelineno-28-44"></a>
+<a id="__codelineno-28-45" name="__codelineno-28-45" href="#__codelineno-28-45"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">}</span><span class="s2">, Loss: </span><span class="si">{</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-46" name="__codelineno-28-46" href="#__codelineno-28-46"></a>
+<a id="__codelineno-28-47" name="__codelineno-28-47" href="#__codelineno-28-47"></a>    <span class="c1"># [AGA] Mark GPU processing end</span>
+<a id="__codelineno-28-48" name="__codelineno-28-48" href="#__codelineno-28-48"></a>    <span class="n">aga</span><span class="o">.</span><span class="n">on_device_end</span><span class="p">()</span>
+<a id="__codelineno-28-49" name="__codelineno-28-49" href="#__codelineno-28-49"></a>
+<a id="__codelineno-28-50" name="__codelineno-28-50" href="#__codelineno-28-50"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sleep 3 sec&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-51" name="__codelineno-28-51" href="#__codelineno-28-51"></a>    <span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-28-52" name="__codelineno-28-52" href="#__codelineno-28-52"></a>
+<a id="__codelineno-28-53" name="__codelineno-28-53" href="#__codelineno-28-53"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-28-54" name="__codelineno-28-54" href="#__codelineno-28-54"></a>    <span class="k">global</span> <span class="n">aga</span>
+<a id="__codelineno-28-55" name="__codelineno-28-55" href="#__codelineno-28-55"></a>
+<a id="__codelineno-28-56" name="__codelineno-28-56" href="#__codelineno-28-56"></a>    <span class="c1"># Initialize model and optimizer</span>
+<a id="__codelineno-28-57" name="__codelineno-28-57" href="#__codelineno-28-57"></a>    <span class="n">net</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span>
+<a id="__codelineno-28-58" name="__codelineno-28-58" href="#__codelineno-28-58"></a>    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+<a id="__codelineno-28-59" name="__codelineno-28-59" href="#__codelineno-28-59"></a>
+<a id="__codelineno-28-60" name="__codelineno-28-60" href="#__codelineno-28-60"></a>    <span class="c1"># [AGA] Initialize ACB client</span>
+<a id="__codelineno-28-61" name="__codelineno-28-61" href="#__codelineno-28-61"></a>    <span class="n">aga</span> <span class="o">=</span> <span class="n">PyTorchAdaptiveGPUAllocator</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-62" name="__codelineno-28-62" href="#__codelineno-28-62"></a>
+<a id="__codelineno-28-63" name="__codelineno-28-63" href="#__codelineno-28-63"></a>    <span class="c1"># Prepare training data</span>
+<a id="__codelineno-28-64" name="__codelineno-28-64" href="#__codelineno-28-64"></a>    <span class="n">X_train</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-65" name="__codelineno-28-65" href="#__codelineno-28-65"></a>    <span class="n">y_train</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10000000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-66" name="__codelineno-28-66" href="#__codelineno-28-66"></a>
+<a id="__codelineno-28-67" name="__codelineno-28-67" href="#__codelineno-28-67"></a>    <span class="c1"># Training loop</span>
+<a id="__codelineno-28-68" name="__codelineno-28-68" href="#__codelineno-28-68"></a>    <span class="n">n_epoch</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-28-69" name="__codelineno-28-69" href="#__codelineno-28-69"></a>    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_epoch</span><span class="p">):</span>
+<a id="__codelineno-28-70" name="__codelineno-28-70" href="#__codelineno-28-70"></a>        <span class="n">train_step</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epoch</span><span class="p">)</span>
+<a id="__codelineno-28-71" name="__codelineno-28-71" href="#__codelineno-28-71"></a>
+<a id="__codelineno-28-72" name="__codelineno-28-72" href="#__codelineno-28-72"></a>    <span class="c1"># [AGA] Finalize ACB</span>
+<a id="__codelineno-28-73" name="__codelineno-28-73" href="#__codelineno-28-73"></a>    <span class="n">aga</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+<a id="__codelineno-28-74" name="__codelineno-28-74" href="#__codelineno-28-74"></a>
+<a id="__codelineno-28-75" name="__codelineno-28-75" href="#__codelineno-28-75"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-28-76" name="__codelineno-28-76" href="#__codelineno-28-76"></a>    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="54-running-manual-mode-programs">5.4. Running Manual Mode Programs</h3>
+<p>Execute Manual Mode programs using <code>agarun</code> <strong>without</strong> <code>AGA_ENABLE_AUTO</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>agarun<span class="w"> </span>python<span class="w"> </span>manual_sample.py
+</code></pre></div>
+<h3 id="55-key-api-methods">5.5. Key API Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>on_device_begin()</code></td>
+<td>Mark start of GPU processing</td>
+<td>Before GPU-intensive computations</td>
+</tr>
+<tr>
+<td><code>on_device_end()</code></td>
+<td>Mark end of GPU processing</td>
+<td>After GPU-intensive computations</td>
+</tr>
+<tr>
+<td><code>finalize()</code></td>
+<td>Clean up ACB resources</td>
+<td>At program end</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-distributed-data-parallel-ddp-mode">6. Distributed Data Parallel (DDP) Mode</h2>
+<h3 id="61-overview">6.1. Overview</h3>
+<p>ACB supports <strong>PyTorch Distributed Data Parallel (DDP)</strong> for multi-GPU training. DDP mode works with both Automatic and Manual modes, allowing distributed training across multiple GPUs with ACB's dynamic allocation.</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Supports <code>torchrun</code> launcher</li>
+<li>Compatible with NCCL (GPU) and GLOO (CPU) backends</li>
+<li>Dynamic GPU allocation per process</li>
+<li>Automatic model and optimizer state management</li>
+</ul>
+<h3 id="62-integration-steps-for-ddp">6.2. Integration Steps for DDP</h3>
+<ol>
+<li><strong>Import <code>PyTorchDDPAdaptiveGPUAllocator</code></strong></li>
+<li><strong>Remove explicit GPU specifications</strong> (<code>set_device</code>, <code>to</code>, <code>device_ids</code>, etc.)</li>
+<li><strong>Leave backend empty in <code>init_process_group()</code></strong> - ACB prepares both NCCL and GLOO</li>
+<li><strong>Use <code>local_rank</code> for process identification</strong></li>
+<li><strong>Initialize <code>PyTorchDDPAdaptiveGPUAllocator</code></strong> with model, optimizer, world_size, and rank</li>
+<li><strong>Mark GPU processing boundaries</strong> with <code>on_device_begin()</code> and <code>on_device_end()</code></li>
+<li><strong>Use <code>move_tensor_to_device()</code> instead of <code>.to()</code></strong> for tensor transfers</li>
+<li><strong>Call <code>aga.finalize()</code> before <code>destroy_process_group()</code></strong></li>
+</ol>
+<h3 id="63-sample-ddp-code">6.3. Sample DDP Code</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="sd">Usage:</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="sd">agarun -- torchrun --standalone --nproc_per_node=2 ddp_sample.py</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">optim</span>
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_process_group</span><span class="p">,</span> <span class="n">destroy_process_group</span>
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="kn">from</span><span class="w"> </span><span class="nn">torch.nn.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistributedDataParallel</span> <span class="k">as</span> <span class="n">DDP</span>
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a><span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.data.distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistributedSampler</span>
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a><span class="c1"># [AGA] Import DDP ACB client</span>
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a><span class="kn">from</span><span class="w"> </span><span class="nn">adaptive_gpu_allocator.pytorch_ddp</span><span class="w"> </span><span class="kn">import</span> <span class="n">PyTorchDDPAdaptiveGPUAllocator</span>
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>
+<a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a><span class="k">def</span><span class="w"> </span><span class="nf">ddp_setup</span><span class="p">():</span>
+<a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a>    <span class="c1"># [AGA] Leave backend empty to prepare both NCCL and GLOO</span>
+<a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a>    <span class="n">init_process_group</span><span class="p">()</span>
+<a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a>
+<a id="__codelineno-30-21" name="__codelineno-30-21" href="#__codelineno-30-21"></a><span class="k">class</span><span class="w"> </span><span class="nc">Trainer</span><span class="p">:</span>
+<a id="__codelineno-30-22" name="__codelineno-30-22" href="#__codelineno-30-22"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">aga</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<a id="__codelineno-30-23" name="__codelineno-30-23" href="#__codelineno-30-23"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">local_rank</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LOCAL_RANK&quot;</span><span class="p">])</span>
+<a id="__codelineno-30-24" name="__codelineno-30-24" href="#__codelineno-30-24"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">DDP</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<a id="__codelineno-30-25" name="__codelineno-30-25" href="#__codelineno-30-25"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">optimizer</span>
+<a id="__codelineno-30-26" name="__codelineno-30-26" href="#__codelineno-30-26"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">aga</span> <span class="o">=</span> <span class="n">aga</span>
+<a id="__codelineno-30-27" name="__codelineno-30-27" href="#__codelineno-30-27"></a>
+<a id="__codelineno-30-28" name="__codelineno-30-28" href="#__codelineno-30-28"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">train_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+<a id="__codelineno-30-29" name="__codelineno-30-29" href="#__codelineno-30-29"></a>        <span class="c1"># [AGA] Mark GPU processing start</span>
+<a id="__codelineno-30-30" name="__codelineno-30-30" href="#__codelineno-30-30"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">aga</span><span class="o">.</span><span class="n">on_device_begin</span><span class="p">()</span>
+<a id="__codelineno-30-31" name="__codelineno-30-31" href="#__codelineno-30-31"></a>
+<a id="__codelineno-30-32" name="__codelineno-30-32" href="#__codelineno-30-32"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+<a id="__codelineno-30-33" name="__codelineno-30-33" href="#__codelineno-30-33"></a>        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-30-34" name="__codelineno-30-34" href="#__codelineno-30-34"></a>        <span class="n">loss</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">mse_loss</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<a id="__codelineno-30-35" name="__codelineno-30-35" href="#__codelineno-30-35"></a>        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+<a id="__codelineno-30-36" name="__codelineno-30-36" href="#__codelineno-30-36"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+<a id="__codelineno-30-37" name="__codelineno-30-37" href="#__codelineno-30-37"></a>
+<a id="__codelineno-30-38" name="__codelineno-30-38" href="#__codelineno-30-38"></a>        <span class="c1"># [AGA] Mark GPU processing end</span>
+<a id="__codelineno-30-39" name="__codelineno-30-39" href="#__codelineno-30-39"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">aga</span><span class="o">.</span><span class="n">on_device_end</span><span class="p">()</span>
+<a id="__codelineno-30-40" name="__codelineno-30-40" href="#__codelineno-30-40"></a>
+<a id="__codelineno-30-41" name="__codelineno-30-41" href="#__codelineno-30-41"></a>        <span class="k">return</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+<a id="__codelineno-30-42" name="__codelineno-30-42" href="#__codelineno-30-42"></a>
+<a id="__codelineno-30-43" name="__codelineno-30-43" href="#__codelineno-30-43"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-30-44" name="__codelineno-30-44" href="#__codelineno-30-44"></a>    <span class="n">ddp_setup</span><span class="p">()</span>
+<a id="__codelineno-30-45" name="__codelineno-30-45" href="#__codelineno-30-45"></a>
+<a id="__codelineno-30-46" name="__codelineno-30-46" href="#__codelineno-30-46"></a>    <span class="c1"># Initialize model and optimizer</span>
+<a id="__codelineno-30-47" name="__codelineno-30-47" href="#__codelineno-30-47"></a>    <span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-30-48" name="__codelineno-30-48" href="#__codelineno-30-48"></a>    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+<a id="__codelineno-30-49" name="__codelineno-30-49" href="#__codelineno-30-49"></a>
+<a id="__codelineno-30-50" name="__codelineno-30-50" href="#__codelineno-30-50"></a>    <span class="c1"># [AGA] Initialize DDP ACB client</span>
+<a id="__codelineno-30-51" name="__codelineno-30-51" href="#__codelineno-30-51"></a>    <span class="n">local_rank</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LOCAL_RANK&quot;</span><span class="p">])</span>
+<a id="__codelineno-30-52" name="__codelineno-30-52" href="#__codelineno-30-52"></a>    <span class="n">world_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;WORLD_SIZE&quot;</span><span class="p">])</span>
+<a id="__codelineno-30-53" name="__codelineno-30-53" href="#__codelineno-30-53"></a>
+<a id="__codelineno-30-54" name="__codelineno-30-54" href="#__codelineno-30-54"></a>    <span class="n">aga</span> <span class="o">=</span> <span class="n">PyTorchDDPAdaptiveGPUAllocator</span><span class="p">(</span>
+<a id="__codelineno-30-55" name="__codelineno-30-55" href="#__codelineno-30-55"></a>        <span class="n">model</span><span class="p">,</span>
+<a id="__codelineno-30-56" name="__codelineno-30-56" href="#__codelineno-30-56"></a>        <span class="n">optimizer</span><span class="p">,</span>
+<a id="__codelineno-30-57" name="__codelineno-30-57" href="#__codelineno-30-57"></a>        <span class="n">world_size</span><span class="o">=</span><span class="n">world_size</span><span class="p">,</span>
+<a id="__codelineno-30-58" name="__codelineno-30-58" href="#__codelineno-30-58"></a>        <span class="n">rank</span><span class="o">=</span><span class="n">local_rank</span><span class="p">,</span>
+<a id="__codelineno-30-59" name="__codelineno-30-59" href="#__codelineno-30-59"></a>        <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span>
+<a id="__codelineno-30-60" name="__codelineno-30-60" href="#__codelineno-30-60"></a>    <span class="p">)</span>
+<a id="__codelineno-30-61" name="__codelineno-30-61" href="#__codelineno-30-61"></a>
+<a id="__codelineno-30-62" name="__codelineno-30-62" href="#__codelineno-30-62"></a>    <span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">aga</span><span class="p">)</span>
+<a id="__codelineno-30-63" name="__codelineno-30-63" href="#__codelineno-30-63"></a>
+<a id="__codelineno-30-64" name="__codelineno-30-64" href="#__codelineno-30-64"></a>    <span class="c1"># Training loop</span>
+<a id="__codelineno-30-65" name="__codelineno-30-65" href="#__codelineno-30-65"></a>    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<a id="__codelineno-30-66" name="__codelineno-30-66" href="#__codelineno-30-66"></a>        <span class="c1"># Create sample data</span>
+<a id="__codelineno-30-67" name="__codelineno-30-67" href="#__codelineno-30-67"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-30-68" name="__codelineno-30-68" href="#__codelineno-30-68"></a>        <span class="n">target</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-30-69" name="__codelineno-30-69" href="#__codelineno-30-69"></a>
+<a id="__codelineno-30-70" name="__codelineno-30-70" href="#__codelineno-30-70"></a>        <span class="c1"># [AGA] Move tensors to device</span>
+<a id="__codelineno-30-71" name="__codelineno-30-71" href="#__codelineno-30-71"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">aga</span><span class="o">.</span><span class="n">move_tensor_to_device</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-30-72" name="__codelineno-30-72" href="#__codelineno-30-72"></a>        <span class="n">target</span> <span class="o">=</span> <span class="n">aga</span><span class="o">.</span><span class="n">move_tensor_to_device</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+<a id="__codelineno-30-73" name="__codelineno-30-73" href="#__codelineno-30-73"></a>
+<a id="__codelineno-30-74" name="__codelineno-30-74" href="#__codelineno-30-74"></a>        <span class="n">loss</span> <span class="o">=</span> <span class="n">trainer</span><span class="o">.</span><span class="n">train_step</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<a id="__codelineno-30-75" name="__codelineno-30-75" href="#__codelineno-30-75"></a>
+<a id="__codelineno-30-76" name="__codelineno-30-76" href="#__codelineno-30-76"></a>        <span class="k">if</span> <span class="n">local_rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-30-77" name="__codelineno-30-77" href="#__codelineno-30-77"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">}</span><span class="s2">, Loss: </span><span class="si">{</span><span class="n">loss</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-30-78" name="__codelineno-30-78" href="#__codelineno-30-78"></a>
+<a id="__codelineno-30-79" name="__codelineno-30-79" href="#__codelineno-30-79"></a>    <span class="c1"># [AGA] Finalize before destroying process group</span>
+<a id="__codelineno-30-80" name="__codelineno-30-80" href="#__codelineno-30-80"></a>    <span class="n">aga</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+<a id="__codelineno-30-81" name="__codelineno-30-81" href="#__codelineno-30-81"></a>    <span class="n">destroy_process_group</span><span class="p">()</span>
+<a id="__codelineno-30-82" name="__codelineno-30-82" href="#__codelineno-30-82"></a>
+<a id="__codelineno-30-83" name="__codelineno-30-83" href="#__codelineno-30-83"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-30-84" name="__codelineno-30-84" href="#__codelineno-30-84"></a>    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="64-running-ddp-programs">6.4. Running DDP Programs</h3>
+<p>Use <code>torchrun</code> with <code>agarun</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>agarun<span class="w"> </span>--<span class="w"> </span>torchrun<span class="w"> </span>--standalone<span class="w"> </span>--nproc_per_node<span class="o">=</span><span class="m">2</span><span class="w"> </span>ddp_sample.py
+</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>--standalone</code>: Single-node training</li>
+<li><code>--nproc_per_node=N</code>: Number of processes (typically = number of GPUs)</li>
+</ul>
+<h3 id="65-ddp-api-reference">6.5. DDP API Reference</h3>
+<h4 id="pytorchddpadaptivegpuallocator__init__"><code>PyTorchDDPAdaptiveGPUAllocator.__init__()</code></h4>
+<p><strong>Arguments:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model</code></td>
+<td><code>torch.nn.Module</code></td>
+<td>PyTorch model</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>optimizer</code></td>
+<td><code>torch.optim.Optimizer</code></td>
+<td>Optimizer (e.g., Adam)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>world_size</code></td>
+<td><code>int</code></td>
+<td>Total number of processes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>rank</code></td>
+<td><code>int</code></td>
+<td>Process ID (0 to world_size-1)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>device</code></td>
+<td><code>str</code></td>
+<td>Device type: <code>any</code>, <code>cuda</code>, <code>gpu</code>, <code>cpu</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>scheduler</code></td>
+<td><code>torch.optim.lr_scheduler</code></td>
+<td>Learning rate scheduler</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">aga</span> <span class="o">=</span> <span class="n">PyTorchDDPAdaptiveGPUAllocator</span><span class="p">(</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>    <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>    <span class="n">world_size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;WORLD_SIZE&quot;</span><span class="p">]),</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>    <span class="n">rank</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LOCAL_RANK&quot;</span><span class="p">]),</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>    <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="p">)</span>
+</code></pre></div>
+<h4 id="move_tensor_to_devicetensor"><code>move_tensor_to_device(tensor)</code></h4>
+<p>Moves a tensor to the appropriate device managed by ACB.</p>
+<p><strong>Arguments:</strong>
+- <code>tensor</code>: Input tensor</p>
+<p><strong>Returns:</strong>
+- Tensor on the target device</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">aga</span><span class="o">.</span><span class="n">move_tensor_to_device</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="7-stopping-the-gpu-assigner">7. Stopping the GPU Assigner</h2>
+<p><code>gpu_assigner</code> can be terminated via the CLI.</p>
+<p>Note that <code>gpu_assigner</code> ignores SIGHUP and SIGINT signals, so sending these signals will not terminate it.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>$<span class="w"> </span>gpu_assigner<span class="w"> </span>stop<span class="w">                </span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>&gt; INFO: Successfully killed GPU assigner process running on 127.0.0.1:11234 (pid=13412)
+</code></pre></div></p>
+<h2 id="8-exit-codes-error-reference">8. Exit Codes &amp; Error Reference</h2>
+<h3 id="81-agarun-exit-codes">8.1. agarun Exit Codes</h3>
+<table>
+<thead>
+<tr>
+<th>Exit Code</th>
+<th>Error Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Error: Invalid value {} for {}</code></td>
+<td>Invalid value in environment variables used by agarun</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Error: Specify your program to run</code></td>
+<td>No user program specified (agarun executed without arguments)</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Error: Failed to communicate with the gpu assigner.</code></td>
+<td>Cannot communicate with gpu_assigner (check if it's running)</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Error: Failed to execute {}</code></td>
+<td>Failed to start the user program</td>
+</tr>
+<tr>
+<td>130</td>
+<td>(None)</td>
+<td>agarun terminated with Ctrl-C</td>
+</tr>
+<tr>
+<td>Varies</td>
+<td>(Depends on program)</td>
+<td>User program's exit code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-gpu_assigner-exit-codes">8.2. gpu_assigner Exit Codes</h3>
+<table>
+<thead>
+<tr>
+<th>Exit Code</th>
+<th>Error Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><code>WARNING: No command is specified...</code></td>
+<td>No start/status/stop command specified</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(Help message displayed)</td>
+<td>Invalid command arguments</td>
+</tr>
+<tr>
+<td>65</td>
+<td><code>ERROR: Could not get a pid from {}.</code></td>
+<td>Failed to retrieve process ID during status/stop</td>
+</tr>
+<tr>
+<td>65</td>
+<td><code>ERROR: Could not get a correct pid from {}.</code></td>
+<td>Process ID corrupted during status/stop</td>
+</tr>
+<tr>
+<td>69</td>
+<td><code>ERROR: No GPU assigner is running on {}.</code></td>
+<td>No running gpu_assigner found during status/stop</td>
+</tr>
+<tr>
+<td>69</td>
+<td><code>WARNING: Could not find GPU assigner process...</code></td>
+<td>gpu_assigner already terminated during stop</td>
+</tr>
+<tr>
+<td>73</td>
+<td><code>ERROR: Could not create the default directory...</code></td>
+<td>Failed to create <code>$HOME/.acb</code> during start</td>
+</tr>
+<tr>
+<td>75</td>
+<td><code>ERROR: GPU assigner is already running on {}.</code></td>
+<td>gpu_assigner already running during start</td>
+</tr>
+<tr>
+<td>Non-zero</td>
+<td><code>ERROR: Failed to start GPU assigner.</code></td>
+<td>Failed to start gpu_assigner</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-docker-deployment">9. Docker Deployment</h2>
+<h3 id="91-overview">9.1. Overview</h3>
+<p><strong>Architecture:</strong>
+- <strong>GPU Assigner Container</strong>: Runs <code>gpu_assigner</code> on <code>0.0.0.0:11234</code>
+- <strong>User App Container(s)</strong>: Connects via <code>AGA_GPU_ALLOC_SERVER_ADDRESS</code>
+- <strong>Network</strong>: Containers communicate via Docker bridge network</p>
+<hr />
+<h3 id="92-gpu-assigner-container">9.2. GPU Assigner Container</h3>
+<p><strong>Dockerfile.gpu_assigner:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu:22.04</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">    </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span>apt-get<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="k">RUN</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>ai-computing-broker
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">11234</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;gpu_assigner&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--address&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>Key:</strong> <code>--address 0.0.0.0</code> enables container-to-container communication (default <code>127.0.0.1</code> blocks external access).</p>
+<hr />
+<h3 id="93-user-application-containers">9.3. User Application Containers</h3>
+<p><strong>Automatic Mode - Dockerfile.user_app_auto:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu:22.04</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">    </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="w">    </span>apt-get<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="k">RUN</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">2</span>.2.1<span class="w"> </span><span class="s2">&quot;numpy&lt;2&quot;</span><span class="w"> </span>ai-computing-broker
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">AGA_ENABLE_AUTO</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;agarun&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;python3&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>Manual Mode - Dockerfile.user_app_manual:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu:22.04</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">    </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="w">    </span>apt-get<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="k">RUN</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">2</span>.2.1<span class="w"> </span><span class="s2">&quot;numpy&lt;2&quot;</span><span class="w"> </span>ai-computing-broker
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;agarun&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;python3&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>DDP Mode - Dockerfile.user_app_ddp:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu:22.04</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="w">    </span>apt-get<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="k">RUN</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">2</span>.2.1<span class="w"> </span><span class="s2">&quot;numpy&lt;2&quot;</span><span class="w"> </span>ai-computing-broker
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;agarun&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--&quot;</span><span class="p">]</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;torchrun&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--standalone&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--nproc_per_node=2&quot;</span><span class="p">]</span>
+</code></pre></div>
+<hr />
+<h3 id="94-docker-compose-configuration">9.4. Docker Compose Configuration</h3>
+<p><strong>docker-compose.yaml:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">  </span><span class="nt">gpu_assigner</span><span class="p">:</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile.gpu_assigner</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acb_gpu_assigner</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">acb-network</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="w">        </span><span class="nt">reservations</span><span class="p">:</span>
+<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="w">          </span><span class="nt">devices</span><span class="p">:</span>
+<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nvidia</span>
+<a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a><span class="w">              </span><span class="nt">count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a><span class="w">              </span><span class="nt">capabilities</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">gpu</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;gpu_assigner&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;status&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-40-16" name="__codelineno-40-16" href="#__codelineno-40-16"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-40-17" name="__codelineno-40-17" href="#__codelineno-40-17"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<a id="__codelineno-40-18" name="__codelineno-40-18" href="#__codelineno-40-18"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<a id="__codelineno-40-19" name="__codelineno-40-19" href="#__codelineno-40-19"></a>
+<a id="__codelineno-40-20" name="__codelineno-40-20" href="#__codelineno-40-20"></a><span class="w">  </span><span class="nt">user_app</span><span class="p">:</span>
+<a id="__codelineno-40-21" name="__codelineno-40-21" href="#__codelineno-40-21"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-40-22" name="__codelineno-40-22" href="#__codelineno-40-22"></a><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile.user_app_auto</span>
+<a id="__codelineno-40-23" name="__codelineno-40-23" href="#__codelineno-40-23"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-40-24" name="__codelineno-40-24" href="#__codelineno-40-24"></a><span class="w">      </span><span class="nt">gpu_assigner</span><span class="p">:</span>
+<a id="__codelineno-40-25" name="__codelineno-40-25" href="#__codelineno-40-25"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<a id="__codelineno-40-26" name="__codelineno-40-26" href="#__codelineno-40-26"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-40-27" name="__codelineno-40-27" href="#__codelineno-40-27"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AGA_GPU_ALLOC_SERVER_ADDRESS=gpu_assigner</span>
+<a id="__codelineno-40-28" name="__codelineno-40-28" href="#__codelineno-40-28"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-40-29" name="__codelineno-40-29" href="#__codelineno-40-29"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./user_code:/app:ro</span>
+<a id="__codelineno-40-30" name="__codelineno-40-30" href="#__codelineno-40-30"></a><span class="w">    </span><span class="nt">working_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/app</span>
+<a id="__codelineno-40-31" name="__codelineno-40-31" href="#__codelineno-40-31"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">train.py</span>
+<a id="__codelineno-40-32" name="__codelineno-40-32" href="#__codelineno-40-32"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">acb-network</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-40-33" name="__codelineno-40-33" href="#__codelineno-40-33"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
+<a id="__codelineno-40-34" name="__codelineno-40-34" href="#__codelineno-40-34"></a><span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-40-35" name="__codelineno-40-35" href="#__codelineno-40-35"></a><span class="w">        </span><span class="nt">reservations</span><span class="p">:</span>
+<a id="__codelineno-40-36" name="__codelineno-40-36" href="#__codelineno-40-36"></a><span class="w">          </span><span class="nt">devices</span><span class="p">:</span>
+<a id="__codelineno-40-37" name="__codelineno-40-37" href="#__codelineno-40-37"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nvidia</span>
+<a id="__codelineno-40-38" name="__codelineno-40-38" href="#__codelineno-40-38"></a><span class="w">              </span><span class="nt">count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<a id="__codelineno-40-39" name="__codelineno-40-39" href="#__codelineno-40-39"></a><span class="w">              </span><span class="nt">capabilities</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">gpu</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-40-40" name="__codelineno-40-40" href="#__codelineno-40-40"></a>
+<a id="__codelineno-40-41" name="__codelineno-40-41" href="#__codelineno-40-41"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-40-42" name="__codelineno-40-42" href="#__codelineno-40-42"></a><span class="w">  </span><span class="nt">acb-network</span><span class="p">:</span>
+<a id="__codelineno-40-43" name="__codelineno-40-43" href="#__codelineno-40-43"></a><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+</code></pre></div>
+<p><strong>Key Settings:</strong>
+- <code>AGA_GPU_ALLOC_SERVER_ADDRESS=gpu_assigner</code>: Container name resolution
+- <code>healthcheck</code>: User app waits for GPU Assigner readiness
+- <code>volumes</code>: Mount user code (read-only recommended)</p>
+<hr />
+<h3 id="95-running-with-docker">9.5. Running with Docker</h3>
+<p><strong>Docker Compose:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>build
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up
+</code></pre></div>
+<p><strong>Docker Run:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="c1"># GPU Assigner</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>acb_gpu_assigner<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>--network<span class="w"> </span>acb-network<span class="w"> </span>acb-gpu-assigner:latest
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="c1"># User App</span>
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>--network<span class="w"> </span>acb-network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">AGA_GPU_ALLOC_SERVER_ADDRESS</span><span class="o">=</span>acb_gpu_assigner<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="w">  </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/code:/app:ro<span class="w"> </span>-w<span class="w"> </span>/app<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a><span class="w">  </span>acb-user-app-auto:latest<span class="w"> </span>train.py
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>
+<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a><span class="c1"># Multiple Jobs</span>
+<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>job1<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>--network<span class="w"> </span>acb-network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">AGA_GPU_ALLOC_SERVER_ADDRESS</span><span class="o">=</span>acb_gpu_assigner<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="w">  </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/code:/app:ro<span class="w"> </span>acb-user-app-auto:latest<span class="w"> </span>model_a.py
+<a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>
+<a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>job2<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>--network<span class="w"> </span>acb-network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">AGA_GPU_ALLOC_SERVER_ADDRESS</span><span class="o">=</span>acb_gpu_assigner<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a><span class="w">  </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/code:/app:ro<span class="w"> </span>acb-user-app-auto:latest<span class="w"> </span>model_b.py
+</code></pre></div>
+<p><strong>DDP:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>--network<span class="w"> </span>acb-network<span class="w"> </span>--shm-size<span class="o">=</span>2g<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">AGA_GPU_ALLOC_SERVER_ADDRESS</span><span class="o">=</span>acb_gpu_assigner<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">  </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/code:/app:ro<span class="w"> </span>-w<span class="w"> </span>/app<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">  </span>acb-user-app-ddp:latest<span class="w"> </span>torchrun<span class="w"> </span>--standalone<span class="w"> </span>--nproc_per_node<span class="o">=</span><span class="m">2</span><span class="w"> </span>ddp_train.py
+</code></pre></div>
+<p><strong>Note:</strong> <code>--shm-size</code> required for DDP inter-process communication.</p>
+<hr />
+<h3 id="96-license-port-configuration">9.6. License &amp; Port Configuration</h3>
+<p><strong>License (Cloud):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">  </span><span class="nt">gpu_assigner</span><span class="p">:</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACB_KEY=YOUR_KEY</span>
+</code></pre></div></p>
+<p><strong>License (On-Premises):</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">  </span><span class="nt">gpu_assigner</span><span class="p">:</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./license.lic:/license.lic:ro</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="w">    </span><span class="nt">working_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/</span>
+</code></pre></div></p>
+<p><strong>Custom Port:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">  </span><span class="nt">gpu_assigner</span><span class="p">:</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;gpu_assigner&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--address&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;0.0.0.0&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--port&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;11235&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;start&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="w">  </span><span class="nt">user_app</span><span class="p">:</span>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AGA_GPU_ALLOC_SERVER_PORT=11235</span>
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
