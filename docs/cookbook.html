@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://tsu-mvpe.github.io/aicomputingbroker-docs/index.html">
+        <link rel="canonical" href="https://tsu-mvpe.github.io/aicomputingbroker-docs/cookbook.html">
       
       
+        <link rel="prev" href="multinode-setup.html">
       
-        <link rel="next" href="getting-started.html">
+      
+        <link rel="next" href="api-reference.html">
       
       
       <link rel="icon" href="assets/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Fujitsu AI Computing Broker Documentation</title>
+        <title>💡 Cookbook - Fujitsu AI Computing Broker Documentation</title>
       
     
     
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-fujitsu-ai-computing-broker-documentation" class="md-skip">
+        <a href="#ai-computing-broker-with-vllm" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🏠 Home
+              💡 Cookbook
             
           </span>
         </div>
@@ -231,19 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -254,7 +247,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -329,10 +321,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="cookbook.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    💡 Cookbook
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="cookbook.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -343,6 +355,66 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai-computing-broker-with-vllm" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Computing Broker with vLLM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Computing Broker with vLLM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-vllm-server-with-acb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run vLLM Server with ACB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Run
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -386,8 +458,56 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai-computing-broker-with-vllm" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Computing Broker with vLLM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Computing Broker with vLLM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-vllm-server-with-acb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run vLLM Server with ACB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Run
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -403,48 +523,66 @@
 
 
 
-<h1 id="welcome-to-fujitsu-ai-computing-broker-documentation">Welcome to Fujitsu AI Computing Broker Documentation</h1>
-<p>Explore the five core resources designed to help you get the most out of Fujitsu AI Computing Broker.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+  <h1>💡 Cookbook</h1>
 
-<a href="getting-started.html" style="text-decoration: none; color: inherit; flex: 1 1 45%; max-width: 500px;">
-  <div style="border: 1px solid #ddd; border-radius: 12px; padding: 1rem; min-height: 260px; height: 100%;">
-    <h3>🏠 Quickstart Guide</h3>
-    <p>Everything you need to set up and run your first ACB job — from installation to verifying GPU utilization in <strong>5 minutes</strong>.</p>
-  </div>
-</a>
-
-<a href="acb_manual.html" style="text-decoration: none; color: inherit; flex: 1 1 45%; max-width: 500px;">
-  <div style="border: 1px solid #ddd; border-radius: 12px; padding: 1rem; min-height: 260px; height: 100%;">
-    <h3>📘 User Manual</h3>
-    <p>A comprehensive user manual covering ACB features, configuration options, job scheduling, and Docker integration for production environments.</p>
-  </div>
-</a>
-
-<a href="cookbook.html" style="text-decoration: none; color: inherit; flex: 1 1 45%; max-width: 500px;">
-  <div style="border: 1px solid #ddd; border-radius: 12px; padding: 1rem; min-height: 260px; height: 100%;">
-    <h3>💡 Cookbook</h3>
-<p>
-  Step-by-step tutorial of utilizing ACB to <strong>manage memory oversubscription</strong>
-</p>
-  </div>
-</a>
-
-<a href="multinode-setup.html" style="text-decoration: none; color: inherit; flex: 1 1 45%; max-width: 500px;">
-  <div style="border: 1px solid #ddd; border-radius: 12px; padding: 1rem; min-height: 260px; height: 100%;">
-    <h3>🖥️ Multi-Node Setup</h3>
-    <p>Comprehensive guide for setting up distributed training across multiple nodes with step-by-step configuration and troubleshooting instructions.</p>
-  </div>
-</a>
-
-<a href="api-reference.html" style="text-decoration: none; color: inherit; flex: 1 1 45%; max-width: 500px;">
-  <div style="border: 1px solid #ddd; border-radius: 12px; padding: 1rem; min-height: 260px; height: 100%;">
-    <h3>🧩 API Reference</h3>
-    <p>Documentation of APIs.</p>
-  </div>
-</a>
-
-</div>
+<h2 id="ai-computing-broker-with-vllm">AI Computing Broker with vLLM</h2>
+<p>This guide demonstrates how to deploy and run the AI Computing Broker (ACB) using the vLLM framework to host several LLMs on a single vLLM server.</p>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>
+<p>Create a virtual environment:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</code></pre></div>
+   Note: If a Python environment is already configured, this step may be skipped.</p>
+</li>
+<li>
+<p>Install AI Computing Broker:
+see <a href="getting-started.html"><strong>🚀 Quickstart Guide</strong></a></p>
+</li>
+<li>
+<p>Install demo dependencies:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>llama-index<span class="o">==</span><span class="m">0</span>.11.2<span class="w"> </span>llama-index-embeddings-ollama<span class="w"> </span>llama-index-llms-openai-like
+</code></pre></div></p>
+</li>
+<li>
+<p>Setting Configuration:
+Create an <code>.env</code> file under the docker folder:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Proxy settings</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">http_proxy</span><span class="o">=</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nv">https_proxy</span><span class="o">=</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nv">HTTP_PROXY</span><span class="o">=</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nv">HTTPS_PROXY</span><span class="o">=</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nv">no_proxy</span><span class="o">=</span>localhost,127.0.0.1
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nv">NO_PROXY</span><span class="o">=</span>localhost,127.0.0.1
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># ACB installation directory or one-level above this cookbooks directory</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nv">ACB_DIR</span><span class="o">=</span>/path/to/client/folder
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># User permissions (run these commands to get values)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nv">UID</span><span class="o">=</span>XXXX<span class="w">  </span><span class="c1"># Get from: id -u</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nv">GID</span><span class="o">=</span>XXXX<span class="w">  </span><span class="c1"># Get from: id -g</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># Hugging Face cache directory</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nv">HF_HOME</span><span class="o">=</span>/tmp/hf-cache
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># Go to huggingface.co</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1"># Create a new token with &quot;Read&quot; permissions</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nv">HUGGING_FACE_HUB_TOKEN</span><span class="o">=</span><span class="s2">&quot;YOUR_HF_TOKEN&quot;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="c1"># GPU scheduler type</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="nv">SCHEDULER</span><span class="o">=</span>gpu-affinity
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="run-vllm-server-with-acb">Run vLLM Server with ACB</h3>
+<p>All required Docker containers are provided. For detailed instructions, refer to the Docker section in the user manual.</p>
+<p>This demo demonstrates usage with <code>Phi-4</code>, <code>TinySwallow-1.5B-Instruct</code>, and <code>TinyLlama-1.1B-Chat-v1.0</code>, integrated with RAG-based data sources.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>docker
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h3 id="simple-run">Simple Run</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>main.py
+</code></pre></div>
 
 
 
