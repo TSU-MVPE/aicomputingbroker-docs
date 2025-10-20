@@ -1,0 +1,163 @@
+# Copyright 2025 Fujitsu Research of America, Inc.
+#
+# This software is licensed under an End User License Agreement (EULA) by Fujitsu
+# Research of America, Inc. You are not allowed to use, copy, modify, or distribute
+# this software and its documentation without express permission from Fujitsu Research
+# of America, Inc. Please refer to the full EULA provided with this software for
+# detailed information on permitted uses and restrictions.
+#
+# The software is provided "as is", without warranty of any kind, express or implied,
+# including but not limited to the warranties of merchantability, fitness for a
+# particular purpose and noninfringement. In no event shall Fujitsu Research of America,
+# Inc. be liable for any claim, damages or other liability, whether in an action of
+# contract, tort or otherwise, arising from, out of or in connection with the software
+# or the use or other dealings in the software.
+
+
+x-resources: &resources
+  resources:
+    reservations:
+      devices:
+        - driver: nvidia
+          capabilities: [gpu]
+          count: all
+
+x-vllm: &vllm
+  build:
+    context: ${ACB_DIR}
+    dockerfile: cookbooks/vllm/adaptive-gpu-allocator/docker/app_vllm/Dockerfile
+    args:
+      - http_proxy=${http_proxy}
+      - https_proxy=${https_proxy}
+      - HTTP_PROXY=${http_proxy}
+      - HTTPS_PROXY=${https_proxy}
+      - no_proxy=${no_proxy}
+      - NO_PROXY=${no_proxy}
+      - VERSION=v0.7.3
+  environment:
+    - http_proxy=${http_proxy}
+    - https_proxy=${https_proxy}
+    - HTTP_PROXY=${http_proxy}
+    - HTTPS_PROXY=${https_proxy}
+    - no_proxy=${no_proxy}
+    - NO_PROXY=${no_proxy}
+    - AGA_GPU_ALLOC_SERVER_ADDRESS=gpu_assigner
+    - no_grpc_proxy=gpu_assigner,${no_proxy}
+    - VLLM_ENGINE_ITERATION_TIMEOUT_S=120
+    - HOME=/vllm-workspace
+    - HUGGING_FACE_HUB_TOKEN=${HUGGING_FACE_HUB_TOKEN}
+  volumes:
+    - type: bind
+      source: ${HF_HOME:-~/.cache/huggingface}
+      target: /vllm-workspace/.cache/huggingface
+    - type: bind
+      source: /etc/group
+      target: /etc/group
+      read_only: true
+    - type: bind
+      source: /etc/passwd
+      target: /etc/passwd
+      read_only: true
+  ipc: host # for NCCL
+  deploy:
+    *resources
+  depends_on:
+    - gpu_assigner
+  user: ${UID}:${GID}
+
+services:
+  gpu_assigner:
+    build:
+      context: ${ACB_DIR}
+      dockerfile: cookbooks/vllm/adaptive-gpu-allocator/docker/gpu_assigner/Dockerfile
+      args:
+        - http_proxy=${http_proxy}
+        - https_proxy=${https_proxy}
+        - HTTP_PROXY=${http_proxy}
+        - HTTPS_PROXY=${https_proxy}
+        - no_proxy=${no_proxy}
+        - NO_PROXY=${no_proxy}
+    init: true
+    command: bash -c "gpu_assigner --address 0.0.0.0 start --scheduler ${SCHEDULER:-gpu-affinity} && sleep infinity"
+    deploy:
+      *resources
+
+  aga_vllm_0:
+    <<: *vllm
+    # You can use the following command to run the model CohereLabs/c4ai-command-r-v01 if you have 1 80GB GPU
+    # command: >
+    #   --model CohereLabs/c4ai-command-r-v01
+    #   --enforce-eager
+    #   --swap-space 0
+    #   --gpu-memory-utilization 1
+    #   --tensor-parallel-size 1
+    #   --disable-custom-all-reduce
+
+    # You can use the following command to run the model microsoft/Phi-4 if you have 2 48GB GPUs
+    command: >
+      --model microsoft/Phi-4
+      --enforce-eager
+      --swap-space 0
+      --gpu-memory-utilization 0.8
+      --tensor-parallel-size 2
+    ports:
+      - 8100:8000
+
+  aga_vllm_1:
+    <<: *vllm
+    command: >
+      --model SakanaAI/TinySwallow-1.5B-Instruct
+      --enforce-eager
+      --swap-space 0
+      --gpu-memory-utilization 0.8
+      --tensor-parallel-size 1
+      --disable-custom-all-reduce
+    ports:
+      - 8101:8000
+
+  aga_vllm_2:
+    <<: *vllm
+    command: >
+      --model TinyLlama/TinyLlama-1.1B-Chat-v1.0
+      --enforce-eager
+      --swap-space 0
+      --gpu-memory-utilization 0.8
+      --tensor-parallel-size 1
+      --disable-custom-all-reduce
+    ports:
+      - 8102:8000
+
+  ollama_0:
+    image: ollama/ollama
+    volumes:
+      - ./ollama:/root/.ollama
+      - ./ollama/entrypoint.sh:/entrypoint.sh
+    ports:
+      - 11434:11434
+    environment:
+      - HTTPS_PROXY=${https_proxy}
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
+
+
+  ollama_1:
+    image: ollama/ollama
+    volumes:
+      - ./ollama:/root/.ollama
+      - ./ollama/entrypoint.sh:/entrypoint.sh
+    ports:
+      - 11435:11434
+    environment:
+      - HTTPS_PROXY=${https_proxy}
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
+
+
+  ollama_2:
+    image: ollama/ollama
+    volumes:
+      - ./ollama:/root/.ollama
+      - ./ollama/entrypoint.sh:/entrypoint.sh
+    ports:
+      - 11436:11434
+    environment:
+      - HTTPS_PROXY=${https_proxy}
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
